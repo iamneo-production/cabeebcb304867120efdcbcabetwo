@@ -30,10 +30,13 @@ const ticTacToe = (element, index) => {
     // ...
 
     // Your code to display the current player's turn
-    // ...
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    result.textContent = `Player ${currentPlayer} Turn`;
 
     // Your code to handle button and cell interactions
-    // ...
+    if (cells[index] == "" && result.textContent != `Player ${currentPlayer} Won 🎉`) {
+        
+    }
 };
 
     /*

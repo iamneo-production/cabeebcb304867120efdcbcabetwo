@@ -7,74 +7,81 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     font-family: "Radio Canada", sans-serif;
-  }
-  
-  #header {
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 2px 2px 4px black;
-    margin-bottom: 0px;
-  }
-  
-  .box {
-    margin: 35px;
-    gap: 10px;
-  }
-  
-  .row {
+    color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3px;
-    margin: 3px;
-  
+    height:auto;
+    margin: 0;
   }
-  
-  .btn {
-    background-color: rgba(215, 215, 215, 0.9);
-    border: solid black 0.5px;
-    border-radius: 4px;
-    height: 75px;
-    width: 75px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 500;
-    color: black;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  
-  }
-  
-  .btn:hover {
-    background-color: rgb(232, 232, 232);
-    cursor: pointer;
-  }
-  
-  .disable-btn {
-    cursor: no-drop;
-  }
-  
-  .result-container {
-    background-color: rgba(255, 255, 255, 0.6);
-    max-width: 200px;
-    width: fit-content;
-    text-align: center;
-    color: black;
-    border: solid black 0.5px;
-    border-radius: 5px;
-    padding: 0px 5px;
-  }
-  
-  .result {
-    color: black;
-    text-shadow: 1px 2px 5px black;
-  }
-  
-  .reset {
-    margin: 10px;
-    margin-top: 25px;
-  }
-  
-  #reset {
-    padding: 5px;
-  }
-  
+
+
+#header {
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 0px;
+}
+
+.box {
+  margin: 35px;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  margin: 3px;
+
+}
+
+.btn {
+  background-color: rgba(215, 215, 215, 0.9);
+  border: solid black 0.5px;
+  border-radius: 4px;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+}
+
+.btn:hover {
+  background-color: rgb(232, 232, 232);
+  cursor: pointer;
+}
+
+.disable-btn {
+  cursor: no-drop;
+}
+
+.result-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 200px;
+  width: fit-content;
+  text-align: center;
+  color: black;
+  border: solid black 0.5px;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+.result {
+  color: black;
+  text-shadow: 1px 2px 5px black;
+}
+
+.reset {
+  margin: 10px;
+  margin-top: 25px;
+}
+
+#reset {
+  padding: 5px;
+}
