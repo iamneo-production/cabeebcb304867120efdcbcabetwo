@@ -17,7 +17,7 @@ let conditions = [
 // Function to handle player moves
 const ticTacToe = (element, index) => {
     // Your game logic here
-
+    if (cells[index] == "" && result.textContent != `Player ${currentPlayer} Won 🎉`) {
     /*
     **Part 1: Winning Conditions (Add your code here)**
 
@@ -25,6 +25,16 @@ const ticTacToe = (element, index) => {
     2. Display a winning message in the 'result' element when a player wins.
     3. Disable all buttons after a win.
     */
+    for (const condition of conditions) {
+        const [a, b, c] = condition;
+        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+            // Display the winning message
+            result.textContent = `Player ${currentPlayer} Won 🎉`;
+            // Disable all buttons
+            btns.forEach(btn => btn.disabled = true);
+            return;
+        }
+    }
 
     // Your code to update the game state and check for a win
     // ...
@@ -34,8 +44,8 @@ const ticTacToe = (element, index) => {
     result.textContent = `Player ${currentPlayer} Turn`;
 
     // Your code to handle button and cell interactions
-    if (cells[index] == "" && result.textContent != `Player ${currentPlayer} Won 🎉`) {
-        
+    cells[index] = currentPlayer;
+    element.value = currentPlayer;
     }
 };
 
