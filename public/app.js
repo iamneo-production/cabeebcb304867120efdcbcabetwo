@@ -18,6 +18,10 @@ let conditions = [
 const ticTacToe = (element, index) => {
     // Your game logic here
     if (cells[index] == "" && result.textContent != `Player ${currentPlayer} Won 🎉`) {
+        // Your code to handle button and cell interactions
+        cells[index] = currentPlayer;
+        element.value = currentPlayer;
+        
     /*
     **Part 1: Winning Conditions (Add your code here)**
 
@@ -36,16 +40,9 @@ const ticTacToe = (element, index) => {
         }
     }
 
-    // Your code to update the game state and check for a win
-    // ...
-
     // Your code to display the current player's turn
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     result.textContent = `Player ${currentPlayer} Turn`;
-
-    // Your code to handle button and cell interactions
-    cells[index] = currentPlayer;
-    element.value = currentPlayer;
     }
 };
 
@@ -61,13 +58,18 @@ const ticTacToe = (element, index) => {
 // Function to reset the game
 const resetGame = () => {
     // Your code to reset the game state
-    // ...
+    cells = ['', '', '', '', '', '', '', '', ''];
+    currentPlayer = 'X';
 
     // Your code to update the 'result' element
-    // ...
+    result.textContent = 'Player X Turn';
 
     // Your code to re-enable buttons
-    // ...
+    btns.forEach(btn => {
+        btn.value = '';
+        btn.textContent = '';
+        btn.disabled = false;
+    });
 };
 
 btns.forEach((btn, i) => {
